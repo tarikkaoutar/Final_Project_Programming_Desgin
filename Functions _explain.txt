@@ -1,0 +1,257 @@
+here is the explain every function in programming
+let start with something simple
+############################## 2D array and pointer##############################################################
+int num = 5;
+int *nP = &np;
+visually
+np             num 
+[ 100 ] =====> [5] ;
+when you deal with pointers and array , things seem a little complicated.for example
+
+int da[4] = {1,2,3,4} /* array of 4 int */
+visually
+         da 100
+          [1]  [2]  [3]   [4]
+declare pointer 
+   
+      int *np = da /* a pointer to a int (in this case it's a pointer to the first element of the array) */
+visually 
+     np           da 100
+     [100] =======> [1]     [2]    [3]     [4]
+      sizeof(da) is 4 (5 * sizeof(int)) 5 * 4 = 20;
+If we wanted to point at the second element, we would do this:
+       
+        int *np = &da[1]; /* a pointer to a int (the second element of the array) */
+        // array start counting from  0
+Visually:
+ 
+     np                da 100    108
+    [108] ===========>  [1]      [2]    [3]    [4]
+
+These are equivalent:
+
+            int *np = &da[1]; /* a pointer to a integer (the second element of the array) */
+            int *np = da + 1; /* a pointer to a integer (the second element of the array) */ 
+//////////////////////////////////////// 2D array ///////////////////////////////////////////////////////////////////
+
+Here's the reference array initialized with values:
+         int map[3][3] = {(0,0),(0,1),(0,2)                           {(0),(1),(2)
+                          (1,0),(1,1),(1,2)   =================>       (3),(4),(5) 
+                          (2,0),(2,1),(2,2)}                           (6),(7),(8)}
+////////////////////////////////////// Malloc //////////////////////////////////////////////////////////////////////
+malloc stand for memory allocation we have two types of memory allocation
+                                                            
+static : memory get allocated in stack memory
+dynamic ://     //   ///      in heap //////
+stack and heap both store in Ram
+why we need dynamic memory allocation?
+if we are not sure how much data going to store that why we use dynamic memory
+let give simple ex:
+int *ptr // static memory allocation
+ptr = malloc(2 * sizeof(int));//heap will allocate 10 bit get allocate in heap
+so using ptr we can access the memory allocated with malloc
+*(ptr+0) = 10;                                                   stack                  heap
+*(ptr+1) = 20;                                                    ptr                   1000
+                                                                 [1000]                  10 // get store at 1000 memory
+                                                                  2048                   20
+if (ptr != null) // ('' memory created successfully\n'');
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+setup_village(){
+set village location
+scanf(r,c)
+check the boundary if the input outside the range
+simple example
+    r = 2 , c = 3 ======> (r = 3 c = 0)
+the village location ouside the range
+map [r][c] == V
+break
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+set monster(){
+how many monster want in map
+ total = number_monster
+set up monster location
+scanf(r,c)
+check the boundary if the input outside the range
+simple example
+    r = 2 , c = 3 ======> (r = 3 c = 0)
+check availability if the imput occuiped by another element
+printf()
+simple exmple
+village (r = 2, c = 3) == monster (r = 2 , c = 3)
+printf("the location is occupied\n");
+map [r][c] == M
+break
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+set gun(){
+set up gun location
+scanf(r,c)
+check the boundary if the input outside the range
+simple example
+    r = 2 , c = 3 ======> (r = 3 c = 0)
+check availability if the imput occuiped by another element
+printf()
+simple exmple
+gun (r = 2, c = 3) == monster (r = 2 , c = 3)
+printf("the location is occupied\n");
+map [r][c] == G
+break
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+set Trap(){
+set up trap location
+scanf(r,c)
+check the boundary if the input outside the range
+simple example
+    r = 2 , c = 3 ======> (r = 3 c = 0)
+check availability if the imput occuiped by another element
+printf()
+simple exmple
+village (r = 2, c = 3) == monster (r = 2 , c = 3)
+printf("the location is occupied\n");
+map [r][c] == T
+break
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+set player(){
+set up player location
+scanf(r,c)
+check the boundary if the input outside the range
+simple example
+    r = 2 , c = 3 ======> (r = 3 c = 0)
+check availability if the imput occuiped by another element
+printf()
+simple exmple
+village (r = 2, c = 3) == monster (r = 2 , c = 3)
+printf("the location is occupied\n");
+map [r][c] == P
+break
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+check the boundary(){
+if the map and row bigger or smaller (0,999)
+so all the input acceptable 
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+check availability(){
+if the map row and coloum is not equal point
+print the location is occuiped
+}
+check movement(){
+if the map and row bigger or smaller (0,999) or if the map row and coloum is not equal point
+print you can't go there
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+go_up(){
+check movement(row-1)
+go_up =====> [0,0] [0,1]=======>[P][0,1]
+                          {1,0}==>{row-1=1- 1}==>{0,0}
+                          [1,0] [1,1]=======>[1,0][1,1]
+the player will move up
+else
+   not able to move there
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+go_down(){
+check movement(row+1)
+go_down===>{0,0}==>{row+1=0+ 1} ==>{1,0}
+else
+   not able to move there
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+go_left(){
+check movement(coloum-1)
+go_left=====>[0,0] [0,1]=======>[0,0][0,1]
+                         {0,1}===>{coloum-1=1 - 1}===>{0,0}
+                          [1,0] [P]========>[P][1,1]
+else 
+ not able to go there
+}
+go_right(){
+check movement(coloum+1)
+go_right====>{1,0}==>{coloum+1=0+ 1}===>{1,1}
+else 
+   not able to go there
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+game_start_go_up()
+{
+ go_up() //call function
+==>if map row and column equal monster check the temp random bigger than 69 you have been beaten monster and replace monster by the player.
+ if not, the monster hit you and you lose blood.
+==>if map row and column equal gun increase strength and replace G by player.
+==>if map row and column equal Trap decrease blood and replace T by player.
+==>if map row and column equal village, select the village items.
+printf("What do you want to do in our village (1:buy a magical sword; 2: go to the bar; 3:leave the village)?\n\n");
+village items ====>if action equal 1 increase strength
+              ====>if action equal 2 and blood = 10 print your blood is full else increase blood
+              ====>if action equal 3 print welcome back
+              ====>if action not equal 3 print invalid number
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+game_start_go_down()
+{
+ go_down() //call function
+==>if map row and column equal monster check the temp random bigger than 69 you have been beaten monster and replace monster by the player.
+ if not, the monster hit you and you lose blood.
+==>if map row and column equal gun increase strength and replace G by player.
+==>if map row and column equal Trap decrease blood and replace T by player.
+==>if map row and column equal village, select the village items.
+printf("What do you want to do in our village (1:buy a magical sword; 2: go to the bar; 3:leave the village)?\n\n");
+village items ====>if action equal 1 increase strength
+              ====>if action equal 2 and blood = 10 print your blood is full else increase blood
+              ====>if action equal 3 print welcome back
+              ====>if action not equal 3 print invalid number
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+game_start_go_left()
+{
+ go_left() //call function
+==>if map row and column equal monster check the temp random bigger than 69 you have been beaten monster and replace monster by the player.
+ if not, the monster hit you and you lose blood.
+==>if map row and column equal gun increase strength and replace G by player.
+==>if map row and column equal Trap decrease blood and replace T by player.
+==>if map row and column equal village, select the village items.
+printf("What do you want to do in our village (1:buy a magical sword; 2: go to the bar; 3:leave the village)?\n\n");
+village items ====>if action equal 1 increase strength
+              ====>if action equal 2 and blood = 10 print your blood is full else increase blood
+              ====>if action equal 3 print welcome back
+              ====>if action not equal 3 print invalid number
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+game_start_go_right()
+{
+ go_right() //call function
+==>if map row and column equal monster check the temp random bigger than 69 you have been beaten monster and replace monster by the player.
+ if not, the monster hit you and you lose blood.
+==>if map row and column equal gun increase strength and replace G by player.
+==>if map row and column equal Trap decrease blood and replace T by player.
+==>if map row and column equal village, select the village items.
+printf("What do you want to do in our village (1:buy a magical sword; 2: go to the bar; 3:leave the village)?\n\n");
+village items ====>if action equal 1 increase strength
+              ====>if action equal 2 and blood = 10 print your blood is full else increase blood
+              ====>if action equal 3 print welcome back
+              ====>if action not equal 3 print invalid number
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Start_Fighting(){
+printf("[1] go up [2] go down [3] go right [4] go left [5] exit: \n");
+scanf(position);
+if position == 1
+   game_start_go_up()
+if position == 2
+   game_start_go_doen()
+if position == 3
+   game_start_go_left()
+if position == 4
+   game_start_go_right()
+if position == 5
+   break
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+start_to_play(){
+if sword == 10 print you win 
+if blood smaller than 0 or equal = 0 print game over
+Start_Fighting() call function
+}
