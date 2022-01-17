@@ -52,10 +52,6 @@ go_right====>{1,0}==>{coloum+1=0+ 1}===>{1,1}
 ==>if map row and column equal village, select the village items.
 
 ## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 www.github.com
 www.youtube.com
 https://www.equestionanswers.com/c/dynamic-2d-3d-array.php
@@ -63,6 +59,7 @@ https://www.equestionanswers.com/c/dynamic-2d-3d-array.php
 
 ## Screenshots
 
-![App Screenshot](https://paste.pics/7a467c73aefd241f08dc47d1a451c48a)
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+https://paste.pics/187010a58bef600d226abb68ef106671)
+![code_project](https://user-images.githubusercontent.com/53352801/149756171-63624497-3c85-43d1-a92b-93bd3acfbdbd.jpg)
+![now-pro](https://user-images.githubusercontent.com/53352801/149756246-075afdc4-89bf-486b-b3b3-bba121b0e570.jpg)
+
 
