@@ -63,6 +63,6 @@ https://www.equestionanswers.com/c/dynamic-2d-3d-array.php
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+https://paste.pics/7a467c73aefd241f08dc47d1a451c48a)
+![App Screenshot](https://paste.pics/7a467c73aefd241f08dc47d1a451c48a)
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+https://paste.pics/187010a58bef600d226abb68ef106671)
 
